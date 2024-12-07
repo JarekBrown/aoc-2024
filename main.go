@@ -14,7 +14,5 @@ func main() {
 
 	flag.Parse()
 
-	// fmt.Println("day:", day)
-	// fmt.Println("part:", part)
 	solutions.Driver(day, part)
 }
