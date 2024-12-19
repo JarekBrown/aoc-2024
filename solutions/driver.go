@@ -4,6 +4,7 @@ import (
 	"aoc24/solutions/day01"
 	"aoc24/solutions/day02"
 	"aoc24/solutions/day03"
+	"aoc24/solutions/day04"
 	"fmt"
 	"os"
 )
@@ -16,6 +17,8 @@ func Driver(day int, part int) {
 		Day2(part)
 	case day == 3:
 		Day3(part)
+	case day == 4:
+		Day4(part)
 	default:
 		fmt.Println("No solution for that day and/or part")
 
@@ -77,6 +80,26 @@ func Day3(part int) {
 			panic(err)
 		}
 		answer = day03.PartTwo(data2)
+
+	}
+	fmt.Println(answer)
+}
+
+func Day4(part int) {
+	var answer int
+	switch part {
+	case 1:
+		data1, err := os.ReadFile("solutions/day04/part1.txt")
+		if err != nil {
+			panic(err)
+		}
+		answer = day04.PartOne(data1)
+	case 2:
+		data2, err := os.ReadFile("solutions/day04/part2.txt")
+		if err != nil {
+			panic(err)
+		}
+		answer = day04.PartTwo(data2)
 
 	}
 	fmt.Println(answer)
